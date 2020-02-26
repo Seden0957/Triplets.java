@@ -18,9 +18,21 @@ public class PalindromeJava {
      */
     public static void main(String[] args) {
         String str = JOptionPane.showInputDialog("Input believed Palindrome:");
+        //User inpts the believed Palindrome
+        int wordLength = str.length();
+        String reversedWord = "";
+        for(int i = wordLength-1; i >= 0; i--) {
     
-        for(int i = 0; i < str.length(); i++) {
-    }
+        reversedWord = reversedWord + str.charAt(i);
+        //Displays both forwards and reversed words
+        System.out.println(str + "->" + reversedWord);
+        }
     
+   if(str.equals(reversedWord)){
+    System.out.println("This is a Palindrome.");
+}
+   else{
+System.out.println("This is not a Palindrome.");
+}
 }
 }
